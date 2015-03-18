@@ -8,6 +8,13 @@ gem 'pg', '0.18.1'
 gem 'settingslogic', '2.0.9'
 gem 'thin', '1.6.3'
 
+#additional gems required for project
+gem 'devise'
+gem "itunes-search-api"
+gem "jquery-rails"
+gem "jquery-ui-rails"
+gem 'turbolinks'
+gem 'bootstrap-sass'
 group :doc do
   gem 'sdoc', '0.4.0'
 end
@@ -29,3 +36,4 @@ group :test do
   gem 'rspec-rails', '3.2.1'
   gem 'shoulda', '3.5.0'
 end
+

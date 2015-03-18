@@ -7,6 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h1>Cipher Movies</h1>
+<nav class="navbar navbar-default " role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <div class="collapse navbar-collapse" >
+        <ul class="nav navbar-nav  navbar-right">
+          <%= nav_link 'Home', root_path, "get" %>
+          <%= nav_link 'Search', search_path, "get" %>
+          <% if user_signed_in? %>
+          <%= nav_link 'Sign out', destroy_user_session_path, "delete" %>
+          <% else %>
+          <%= nav_link 'Sign in', new_user_session_path, "get"  %>
+          <%= nav_link 'Sign up', new_user_registration_path, "get"  %>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
 
 <%= yield %>
 
