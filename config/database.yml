@@ -1,0 +1,15 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  
+development:
+  <<: *default
+  database: cipher_movies_development
+
+test:
+  <<: *default
+  database: cipher_movies_test
+
+production:
+  <<: *default
